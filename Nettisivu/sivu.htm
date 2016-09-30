@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Jaakon sivu
+</title>
+<script src="jquery.js"></script>
+<script>
+function a(){
+ $("#div1").hide();
+ $(".b1").hide();
+ $("#div1").fadeIn(6000);
+ setTimeout(function(){
+  $("#b1").fadeIn(2000);
+  $("#b1").animate({top:'900px'},10000,function(){
+   $("#b1").fadeOut()}
+  );
+  $("#b2").fadeIn(3000);
+  $("#b2").animate({top:'900px'},5000,function(){
+   $("#b2").fadeOut()}
+  );
+  $("#b3").fadeIn(1000);
+  $("#b3").animate({top:'900px'},15000,function(){
+   $("#b3").fadeOut()}
+  );
+ },3000);
+  $("#cookie").hide();
+ var x=0;$("#cookie").fadeIn(2000);
+ while(x<10){
+  setTimeout(function(){
+   $("#cookie").animate({left:'+=70px'},800)},1000);
+   x=x+1;
+  };
+ while(x<25){
+  setTimeout(function(){
+   $("#cookie").animate({left:'-=70px'},800)},1000);
+   x=x+1;
+  };
+ setTimeout(function(){$("#cookie").remove()},25000)
+};
+function bgf(z){
+ document.bgColor=z;
+ $("a").css("color",z);
+ $("h5").css("color","#000000");
+};
+$(document).ready(function(){
+ $(".d").mouseleave(function(){
+  $(this).animate({opacity:'2'},150);
+ });
+});
+$(document).ready(function(){
+ $(".d").mouseenter(function(){
+  $(this).animate({opacity:'0.5'},150);
+ });
+});
+</script>
+<link rel="icon" href="icon.ico" />
+</head>
+<style type="text/css">
+a	{
+	color:#000000;
+}
+h1	{
+	font-size:66px;
+	text-align:center;
+}
+h2	{
+	font-size:30px;
+	font-weight:bold;
+	color:black;
+	font-family:Ravie,Segoe print;
+}
+h5	{
+	color:#b81818;
+	font-family:Ravie,Segoe print;
+	font-size:24px;
+}
+</style>
+<body onLoad="a()" bgcolor="#000000">
+<table cellpadding=8 id="t" border="2" borderColor="#333333">
+<tr>
+<td>
+<a href="sivu.htm">
+<div class="d">
+<h5>
+Etusivu
+</h5>
+</div>
+</a>
+</td>
+<td>
+<a href="slender.htm">
+<div class="d">
+<h5>
+Slender
+</h5>
+</div>
+</a>
+</td>
+</tr>
+</table>
+<br />
+<div style="left:1400px;top:0px;position:absolute;height:50px;width:50px;" class="b1" id="b1">
+<img src="img1.png">
+</div>
+<div style="left:1800px;top:0px;position:absolute;height:50px;width:50px;" class="b1" id="b2">
+<img src="img1.png">
+</div>
+<div style="left:400px;top:0px;position:absolute;height:50px;width:50px;" class="b1" id="b3">
+<img src="img1.png">
+</div>
+<div style="left:650px;bottom:600px;font-family:Segoe print;width:640px;height:400px;position:absolute;" id="div1">
+<img src="h2.png">
+</div>
+<p>
+<br />
+<br />
+<br />
+<div style="height:300px;width:300px;left:0;top:400px;position:absolute;" id="cookie"><img src="cookie.gif">
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div style="align:bottom;width:100%;height:300px;background-image:url('bo.png');">
+</div>
+</body>
+</html>

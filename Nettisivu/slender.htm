@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Slender
+</title>
+<script src="jquery.js"></script>
+<script>
+function s(){
+ setInterval(function(){
+  $("#slender").fadeOut()},1321);
+ setInterval(function(){
+  $("#slender").fadeIn()},1893);
+ $("#d1").hide();
+};
+function bgf(z){
+ document.bgColor=z;
+};
+$(document).ready(function(){
+ $(".d").mouseleave(function(){
+  $(this).animate({opacity:'2'},150);
+ });
+});
+$(document).ready(function(){
+ $(".d").mouseenter(function(){
+  $(this).animate({opacity:'0.5'},150);
+ });
+});
+$(document).ready(function(){
+ $("#da").toggle(function(){
+  $("#d1").slideDown(750);
+ },function(){
+  $("#d1").slideUp(750);
+ });
+});
+function sa(){
+ $("#d1").hide();
+ var b=$("#b");
+ b.animate({left:'+=200px'},2000)
+ setInterval(function(){
+  b.animate({left:'-=200px'},2000);
+  setTimeout(function(){
+   b.animate({left:'+=200px'},2000)
+  },2000)
+ },4000)
+};
+</script>
+<link rel="icon" href="slender.ico" />
+</head>
+<style type="text/css">
+a	{
+	color:black;
+}
+body	{
+	color:white;
+	font-family:Ravie,Segoe print;
+	font-size:24px;
+}
+h5	{
+	color:white;
+	font-family:Ravie,Segoe print;
+	font-size:24px;
+}
+</style>
+<body bgcolor="#000000" onLoad="sa()">
+<table cellpadding=8 border="2" borderColor="#494949">
+<tr>
+<td>
+<div class="d">
+<a href="sivu.htm">
+<h5>
+Etusivu
+</h5>
+</a>
+</div>
+</td>
+<td>
+<div class="d">
+<a href="slender.htm">
+<h5>
+Slender
+</h5>
+</a>
+</div>
+</td>
+</tr>
+</table>
+<div style="left:660px;width:574px;height:378px;position:absolute;" id="slender">
+<img src="slender.jpeg">
+</div>
+<div style="width:900px;height:378px;position:absolute;left:430px;top:150px" id="b">
+<img src="b.png">
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<center>
+<table cellpadding="3px" cellspacing="0px">
+<tr>
+<td border=1 borderColor="#ffffff" align="center" width="660px">
+<div id="da">
+Note
+</div>
+</td>
+</tr>
+<tr>
+<td width="660px" border=0>
+<div id="d1" style="background-image:url('note.png');color:#000000;font-size:24;">
+<center>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</center>
+</div>
+</td>
+</center>
+</tr>
+</table>
+</body>
+</html>
